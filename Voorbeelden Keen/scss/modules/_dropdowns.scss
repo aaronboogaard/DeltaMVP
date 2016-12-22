@@ -1,0 +1,115 @@
+.wrapper-dropdown-5 {
+      /* Size & position */
+      position: relative;
+      width: 200px;
+      margin: 0 auto;
+      padding: 6px 25px;
+
+      /* Styles */
+      background: $inactiveColor;
+      font-size: 1.1em;
+      color: white;
+      border-radius: 25px;
+      @include shadowRight;
+      cursor: pointer;
+      outline: none;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+      -webkit-transition-delay: 0.3s;
+      -moz-transition-delay: 0.3s;
+      -ms-transition-delay: 0.3s;
+      -o-transition-delay: 0.3s;
+    }
+
+.wrapper-dropdown-5:after { /* Little arrow */
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: white transparent;
+    outline: none;
+}
+
+.wrapper-dropdown-5 .dropdown {
+    /* Size & position */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    /* Styles */
+    background: $dropdownBGColor;
+    border-radius: 0 0;
+    border-left: 3px solid $activeColor;
+    border-right: 3px solid $activeColor;
+    list-style: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    outline: none;
+
+    padding: 0 0;
+    margin: 0 0;
+
+    /* Hiding */
+    max-height: 0;
+    overflow: hidden;
+}
+
+.wrapper-dropdown-5 .dropdown li {
+  padding: 0 10px;
+}
+
+.wrapper-dropdown-5 .dropdown li a {
+    display: block;
+    text-decoration: none;
+    color: $pTextColor;
+    padding: 10px 0;
+    transition: all 0.3s ease-out;
+    border-bottom: 1px solid $activeColor;
+    text-indent: 10px;
+}
+.wrapper-dropdown-5 .dropdown li:last-of-type a {
+  border: none;
+
+}
+/* Hover state */
+
+.wrapper-dropdown-5 .dropdown li:hover a {
+  color: $activeColor;
+}
+
+/* Active state */
+.wrapper-dropdown-5.active {
+  border-radius: 0 0 0 0;
+  background: $activeColor;
+  box-shadow: none;
+  border-bottom: none;
+  color: white;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  -o-transition-delay: 0s;
+}
+.wrapper-dropdown-5.active:after {
+  border-color: #fff transparent;
+}
+.wrapper-dropdown-5.active .dropdown {
+  border-bottom: 3px solid $activeColor;
+  max-height: 400px;
+}

@@ -1,0 +1,109 @@
+.detailsContainer {
+	float: left;
+	width: 50%;
+	border: 4px solid $activeColor;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 20px;
+	h3 {
+		color: $activeColor;
+		margin: 5px 0 5px 0;
+		font-size: 1.3em;
+	}
+	p {
+		padding: 0 0;
+		margin: 0 0;
+	}
+	.descriptionsContainer {
+		padding: 10px 0;
+		@include displayFlex;
+		.descriptionsColumn {
+			flex-grow: 1;
+			padding: 0 5px;
+		}
+	}
+	.factorContainer {
+		h3 {
+			margin: 0;
+			font-size: $h3size;
+			text-transform: uppercase;
+			padding-bottom: 5px;
+			padding-top: 10px;
+		}
+		.factorTable {
+             width: 100%;
+			font-size: $paragraphsize;
+			line-height: 2;
+			tbody {
+				tr:nth-child(3n+2) {
+					display: table-row;
+				}
+				td {
+					line-height: 1em;
+					padding: 5px;
+				}
+			}
+			.factorCategory {
+				font-style: italic;
+				width: 15%;
+				min-width: 80px;
+			}
+			.highestValue {
+				font-weight: bold;
+			}
+		}
+		.factorUpdateButton {
+			position: relative;
+			padding-bottom: 10px;
+			a {
+				@include squaredButton($bgColor);
+                border: 1px solid $dWhitelDarkBlue;
+                color: $dWhitelDarkBlue;
+
+                &:hover{
+                    background: $dWhitelLightBlue;
+                }
+			}
+		}
+	}
+}
+@media (max-width: 1000px) {
+	.descriptionsContainer,
+	.checkboxesContainer {
+		@include displayFlex;
+		flex-direction: column;
+	}
+}
+@media all and (max-width: 920px) {
+	.logContainer {
+		.logTabs {
+			p {
+				font-size: 0.9em;
+				padding-top: 2px;
+			}
+		}
+		table {
+			p {
+				font-size: 0.9em;
+			}
+		}
+	}
+}
+@media all and (max-width: 840px) {
+	.logContainer {
+		.logTabs {
+			p {
+				font-size: 0.8em;
+				padding-top: 5px;
+			}
+		}
+		table {
+			p {
+				font-size: 0.9em;
+			}
+			.logDescription {
+				padding-left: 3px;
+			}
+		}
+	}
+}

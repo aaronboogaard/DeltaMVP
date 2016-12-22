@@ -1,0 +1,58 @@
+.roundedButton {
+  display: inline-block; 
+  margin-left: 5px;
+  margin-right: 5px;
+  @include greenButton(3px);
+}
+
+.deleteButton {
+  @include redButton(3px);
+}
+
+.disabledButton {
+  @include greyButton(3px);
+}
+
+.nonClickableButton{
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    @include nonClickableButton(3px);
+}
+
+.newRiskButton, .newDepartmentButton {
+  @extend .roundedButton;
+  display: inline-block;
+}
+
+.containerDropdown{
+  display: inline-block;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.accessLevelDropdown{
+   @include buttonLikeDropdown($bgColor, 3px)
+}
+.factorUpdateButton {
+    width: 100%;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    a{
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+.rowContent .assignmentColumn .detailsButton{
+    width: 100%;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+
+    a{
+        display: inline-block;
+        width: 100%;
+    }
+}

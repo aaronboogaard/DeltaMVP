@@ -1,0 +1,151 @@
+.containerSetUp{
+    @include underlineInputs($bgColor);
+    @include underlineDropDowns($bgColor);
+    text-align: center;
+
+    .step {
+      height: 100vh;
+    }
+
+    .setUpStepOne, .setUpStepTwo, .setUpStepThree, .setUpStepFour, .setUpStepFive{
+        display: inline-block;
+        width: 85%;
+        margin: 25px auto;
+        text-align: left;
+    }
+    
+//    .getStarted{
+//        @include greenButton(10px);
+//        display: inline-block;
+//        margin: 25px auto;
+//        }
+    
+    .buttons{
+        float: right;
+        padding: 50px 0 25px 0;
+        
+        button{
+            width: 125px;
+            height: 50px;
+            background-color: transparent;
+            font-size: 1.2em;
+            transition: 0.5s;
+            padding: 4px 0;
+            @include shadowRight;
+            @include border-radius (50px, 50px, 50px, 50px);
+
+            &:active{
+                opacity: 0.5;
+                transition: 0.5s;
+            }
+        }
+        
+        .next{
+            margin-right: 15px;
+            border: 2px solid $activeColor;
+            transition: 0.5s;
+            
+            svg{
+                .st0{
+                    fill:$activeColor;
+                }
+                width: 40px;
+                height: 40px;
+            }
+            
+            &:hover{
+                background-color: $activeColor;
+                border: 2px solid $activeColor;
+                color: white;
+                transition: 0.5s;
+                text-decoration: none;
+                opacity: 1;
+                svg{
+                    .st0{
+                        fill:white;
+                    }
+                 }
+            }
+        }
+        
+        .back{
+            margin-right: 15px;
+            border: 2px solid $disabledButtonColor;
+            transition: 0.5s;
+            
+            svg{
+                .st0{
+                    fill:$disabledButtonColor;
+                }
+                width: 40px;
+                height: 40px;
+            }
+            
+            &:hover{
+                background-color: $disabledButtonColor;
+                border: 2px solid $disabledButtonColor;
+                color: white;
+                transition: 0.5s;
+                text-decoration: none;
+                opacity: 1;
+                svg{
+                    .st0{
+                        fill:white;
+                    }
+                 }
+            }
+        }
+        
+        
+    }
+
+    h3{
+        color: $activeColor;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    h4{
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+
+      p{
+          width: 100%;
+          text-align: left;
+          font-size: 1.2em;
+           // margin: 0 10vw;
+          padding-right: 15px;
+          margin-top: 30px;
+        }
+
+    .setUpStepSix{
+        display: inline-block;
+        width: 85%;
+        margin: 25px auto;
+        text-align: center;
+        h4, p{
+            text-align: left;
+        }
+        .getStarted{
+        @include greenButton(10px);
+        display: inline-block;
+        margin: 25px auto;
+        }
+    }
+    
+    .getStartedDiv{
+        display: inline-block;
+        width: 100%;
+        margin: 25px auto;
+        text-align: center;
+        h4, p{
+            text-align: left;
+        }
+        .getStarted{
+        @include greenButton(10px);
+        display: inline-block;
+        margin: 25px auto;
+        }
+    }
+}

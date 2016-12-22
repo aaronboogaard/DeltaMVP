@@ -1,0 +1,10 @@
+@import "themes/darkTheme";
+@import "partials/_mixin";
+
+// Heights and widths
+$departmentContainerWidth: 94vw;
+
+$tablet: "screen and (max-width: 1024px) , screen and (max-height: 768px)";
+
+@import "modules/_miniBootstrap";
+@import "modules/_login";

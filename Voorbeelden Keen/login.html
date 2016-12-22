@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Keen Management</title>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<!--
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+-->
+
+<!--    <script type="text/javascript" src="../js/ready.js" th:src="@{/js/ready.js}"></script>-->
+
+<!--    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>-->
+
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+
+    <link rel="shortcut icon" href="../static/images/favicon/favicon.ico" th:src="@{/css/favicon.ico}"/>
+</head>
+
+<body>
+    <div class="container">
+        <div class="contents">
+            <div class="textAbove">
+                <h1>Kee<span>n</span></h1>
+                <h2 id="welcomeBack">Welcome Back!</h2>
+            </div>
+            <div class="logInText">
+                <p>Log in</p>
+            </div>
+            <div class="userLog">
+                <form th:action="@{/login}" method="post">
+                    <div class="logInForm">
+                        <input type="email" name="username" id="email" required="required" maxlength="254" placeholder="Email" />
+                        <input type="password" name="password" id="password" required="required" maxlength="254" placeholder="Password"/>
+                        
+                        <div class="rememberMe">
+                         <label class="keenCustomCB keenCustomCB--checkbox"> Remember me
+                                <input type="checkbox" checked="checked"/>
+                                <div class="keenCustomCB__indicator"></div>
+                        </label>
+                        </div>
+                        <a href="passwordReset.html" class="forgotPassword" alt="forgot password?">Forgot your password?</a>
+                        <!--
+                        <div th:if="${param.error}">
+                            <p><b>Invalid email and/or password.</b></p>
+                        </div>
+-->
+
+                        <!-- <div class="underForm">
+                            <input type="checkBox" name="rememberMe" id="cbRememberMe"/>
+                            <label for="cbRememberMe">Remember me</label>
+                            <a href="#" class="forgot">Forgot Password?</a>
+                        </div> -->
+                    </div>
+                    <input class="logInButton" type="submit" value="Login to account" />
+                </form>
+            </div>
+            <div class="switchLogInSignUp">
+                <p>Don't have an account yet? Create one!</p>
+                <a href="register.html" class="switchButton">Sign Up</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <img src="../img/frontpage/keenLogoAlpha.png" alt="logoKeen"/>
+        <p>
+            All rights reserved &copy; 2016 <br/>
+            Keen Management | <a href="#">Terms &amp; Conditions</a>
+        </p>
+    </footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+.breadcrumbs {
+	border-top: 2px solid $activeColor;
+	border-bottom: 2px solid $activeColor;
+	line-height: 2em;
+	font-size: 1.2em;
+	@include displayFlex;
+	align-content: flex-start;
+	flex-wrap: wrap;
+	.breadcrumbContentBack {
+		width: auto;
+		padding-right: 8px;
+		a {
+			color: $dTextColor;
+			&:hover {
+				color: $pTextColor;
+			}
+		}
+	}
+	.breadcrumbContentHistory {
+		width: auto;
+		padding-right: 8px;
+		color: $dTextColor;
+		a {
+			color: $dTextColor;
+			&:hover {
+				color: $pTextColor;
+			}
+		}
+	}
+	.breadcrumbContentCurrent {
+		width: auto;
+		a {
+			color: $activeColor;
+		}
+	}
+}

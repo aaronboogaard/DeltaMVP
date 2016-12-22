@@ -1,0 +1,184 @@
+table {
+  width: 100%;
+    color: $tableTextColor;
+}
+
+tbody{
+  tr:nth-child(3n+3){
+    display: none;
+    width: 100%;
+  }
+}
+
+th, td {
+  border-spacing: 100px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+thead {
+  background-color: $headerTableColor;
+    color: $textTableHeaderColor;
+}
+
+tr {
+    &.filler {
+        height: 10px;
+        background: transparent;
+    }
+
+    &.black {
+    background-color: black;
+      .rowContent .factorColumn .factorUpdateButton a, .rowContent .assignmentColumn .detailsButton a{
+          @include squaredButton(black);
+      }
+    }
+
+    &.red {
+    background-color: $red;
+      .rowContent .factorColumn .factorUpdateButton a, .rowContent .assignmentColumn .detailsButton a{
+          @include squaredButton($red);
+      }
+    }
+
+    &.orange {
+    background-color: $orange;
+      .rowContent .factorColumn .factorUpdateButton a, .rowContent .assignmentColumn .detailsButton a{
+          @include squaredButton($orange);
+      }
+    }
+    &.green {
+    background-color: $green;
+      .rowContent .factorColumn .factorUpdateButton a, .rowContent .assignmentColumn .detailsButton a{
+          @include squaredButton($green);
+      }
+    }
+    }
+.riskValue{
+    font-weight: bold;
+}
+.cellWithCheckbox{
+    @include keenCheckbox;
+
+    .keenCustomCB {
+        margin-bottom: 15px;   
+    }
+}
+
+.rowContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: stretch;
+    text-align: left;
+    width: 100%;
+    border-top: 1px solid white;
+    
+    h3 {
+        margin: 0;
+        font-size: $h3size;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+    }
+
+    p {
+        font-size: $paragraphsize;
+    }
+    
+
+    .factorColumn{
+        position: relative;
+        flex-grow: 1.5;
+        margin: 20px;
+        padding-bottom: 50px;
+        @include clearTable;
+        
+        .impact{
+            padding-top: 15px;
+        }
+        .factorTable{
+            font-size: $paragraphsize;
+            line-height: 2;
+            tbody {
+                tr:nth-child(3n+2){
+                    display: table-row;
+                }
+                td{
+                    line-height: 1em;
+                    padding: 5px;
+                }
+            }
+            
+            .factorCategory{
+                font-style: italic;
+                width: 15%;
+                min-width: 80px;
+            }
+            .highestValue{
+                font-weight: bold;
+            }
+        }
+    }
+        
+    .descriptionColumn{
+        padding: 0 20px;
+        margin: 20px 0;
+        max-width: 33%;
+        flex-grow: 2;
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+    }
+    
+    .assignmentColumn{
+        flex-grow: 1;
+        flex-shrink: 2;
+        margin: 20px;
+        position: relative;
+        width: auto;
+        min-width: 120px;
+    }
+}
+
+.tableIcon {
+    float: left;
+    max-height: 26px;
+    max-width: 26px;
+    border: 4px;
+    margin: -6px 0;   
+}
+
+@media all and (max-width: 840px) {
+    .rowContent{
+        h3{
+            font-size: 1.2em;
+        }
+    .factorColumn{
+        min-width: 225px;
+        .factorTable{
+            font-size: 0.9em;
+            line-height: 1em;
+            tbody{
+                td{
+                    line-height: 1.1em;
+                    padding: 5px 0;
+                }
+            }
+           
+        }
+        
+    }
+        
+    .descriptionColumn{
+        p{
+            font-size: 0.9em;
+        }
+    }
+    
+    .assignmentColumn{    
+        p{
+                font-size: 0.9em;
+            }
+        }
+    }
+}

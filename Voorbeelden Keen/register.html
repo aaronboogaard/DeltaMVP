@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Keen Management</title>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<!--
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+-->
+
+    <script type="text/javascript" src="../static/js/ready.js" th:src="@{/js/ready.js}"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/login.css" th:href="@{/css/login.css}" />
+
+    <link rel="shortcut icon" href="../static/images/favicon/favicon.ico" th:src="@{/css/favicon.ico}"/>
+</head>
+
+<body>
+    <div class="container">
+        <div class="contents">
+            <div class="textAbove">
+                <h1>Kee<span>n</span></h1>
+                <h2 id="welcomeFirst">Welcome to Keen, a project management tool with a <i>risk-driven</i> approach. Keen is specially designed for project managers!</h2>
+            </div>
+            <form th:action="@{/register}" method="post">
+                <div class="logInText">
+                    <p>Account</p>
+                </div>
+                <div class="userLog">
+                    <div class="logInForm">
+                        <input class="inputText" type="email" name="email" id="email" required="required" maxlength="30"
+                               title="Invalid email!"
+                               placeholder="Email"/>
+                        <div class="password">
+                            <input class="inputText passwordInput" type="password" name="password" id="password" required="required" maxlength="30"
+                               title="Invalid password! Must be at least 6 characters long, have one capital letter and one character."
+                               placeholder="Password"/>
+                            <input class="inputText passwordInput" type="password" name="password" id="password" required="required" maxlength="30"
+                               title="Invalid password! Must be at least 6 characters long, have one capital letter and one character."
+                               placeholder="Re-enter password"/>
+<!--                            <div class="passwordVisible" onmousedown="passwordVisible()" onmouseup="passwordHidden()">Show Password</div>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="logInText">
+                    <p>Profile</p>
+                </div>
+                <div class="userLog">
+                    <div class="logInForm">
+                        <input class="inputName" type="text" name="firstName" id="firstName" required="required" maxlength="30"
+                               title="Invalid first name! Must be at least 2 characters long."
+                               placeholder="First name"/>
+                        <input class="inputName" type="text" name="lastName" id="lastName" required="required" maxlength="30"
+                               title="Invalid last name! Must be at least 2 characters long."
+                               placeholder="Last name"/>
+<!--
+                        <input class="inputText" type="text" name="username" id="username" required="required" maxlength="30"
+                               title="Invalid username! Must be at least 2 characters long."
+                               placeholder="Username"/>
+-->
+                    </div>
+<!--
+                    <div class="underForm">
+                        <input type="checkBox" name="mailMe" id="cbMailMe"/>
+                        <label for="cbMailMe">Send me the (very occasional) email about the Keen service</label>
+                    </div>
+-->
+                </div>
+                <div class="emailUpdates">
+                     <label class="keenCustomCB keenCustomCB--checkbox"> Keep me updated about Keen through (very occasional) email
+                            <input type="checkbox" />
+                            <div class="keenCustomCB__indicator"></div>
+                    </label>
+                </div>
+                
+                <div class="agreeToTerms">
+                     <label class="keenCustomCB keenCustomCB--checkbox">I agree to Keen's <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>
+                            <input type="checkbox"/>
+                            <div class="keenCustomCB__indicator"></div>
+                    </label>
+                </div>
+                
+<!--                <p class="agreement">By creating an account, you agree to Keen's <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>.</p>-->
+                <input type="submit" value="Register" class="createButton"/>
+            </form>
+        </div>
+
+        <div class="switchLogInSignUp">
+            <p>Already have an account? Log in instead!</p>
+            <a href="login.html" class="switchButton">Log in</a>
+        </div>
+    </div>
+
+    <footer>
+        <img src="../img/frontPage/keenLogoAlpha.png" alt="logoKeen" />
+        <p>
+            All rights reserved &copy; 2016 <br/>
+            Keen Management | <a href="#">Terms &amp; Conditions</a>
+        </p>
+    </footer>
+</body>
+</html>

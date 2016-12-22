@@ -1,0 +1,45 @@
+.profileGeneralContainer{
+    text-align: center;
+    width: 100%;
+    @include displayFlex;
+    justify-content: center;
+    flex-direction: column;
+    
+    .profilePicture{
+        img{
+        display: inline-block;
+        width: 20%;
+        border: 1px $dTextColor solid;
+        @include border-radius(50%, 50%, 50%, 50%); 
+        }
+    }
+    
+    .profileButtons{
+        @include displayFlex;
+        justify-content: center;
+        flex-direction: row 
+    }
+    
+    .profileInfo{
+        width: 60%;
+//        margin-top: 30px;
+        margin: 30px auto 0;
+        @include displayFlex;
+        justify-content: flex-start;
+        border-top: 1px $inactiveColor solid;
+        flex-direction: row;
+        .firstColumn{
+            text-align: left;
+            margin-right: 50px;
+            h3{
+                color: $inactiveColor;
+            }
+        }
+        .secondColumn{
+            text-align: left;
+        }
+        h3{
+            line-height: 30px;
+        }
+    }
+}

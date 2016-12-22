@@ -1,0 +1,228 @@
+.containerOtherDepartments {
+	padding-right: 20px;
+	float: left;
+	margin: 0;
+	width: 33%;
+	min-width: 230px;
+	display: inline-block;
+}
+.containerOtherProjects {
+	padding: 0 20px;
+	float: left;
+	margin: 0;
+	width: 67%;
+	display: inline-block
+}
+h2 {
+	margin-bottom: 0;
+}
+.addDepartment {
+	// @include border-radius(10px, 10px, 10px, 10px);
+	@include otherDepartmentFormat;
+	border: 4px solid $activeColor;
+	position: relative;
+	background-color: $bgColor;
+	display: inline-block;
+	margin: 2vh 1vw 2vh 0;
+	@include shadow;
+	a {
+		color: $sTextColor;
+	}
+	.departmentName {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		display: inline-block;
+		padding: 0 1vw;
+		.alignFix {
+			height: 100%;
+			display: table;
+			text-align: center;
+			width: 100%;
+			h4 {
+				display: table-cell;
+				vertical-align: middle;
+				line-height: normal;
+				color: $activeColor;
+				font-size: 1.5em;
+			}
+		}
+	}
+	&:hover {
+		background-color: $activeColor;
+		border: 4px solid $activeColor;
+		transition: 0.5s;
+		.alignFix {
+			h4 {
+				color: white;
+				transition: 0.5s;
+			}
+		}
+	}
+	&:active {
+		opacity: 0.5;
+		transition: 0.5s;
+	}
+}
+.aDepartment {
+	//@include border-radius(10px, 10px, 10px, 10px);
+	@include otherDepartmentFormat;
+	border: 4px solid $inactiveColor;
+	position: relative;
+	background-color: $inactiveColor;
+	display: inline-block;
+	margin: 2vh 1vw 2vh 0;
+	@include shadow;
+	a {
+		color: $sTextColor;
+	}
+	.departmentName {
+		width: 66%;
+		height: 100%;
+		text-align: center;
+		display: inline-block;
+		padding: 0 1vw;
+		.alignFix {
+			height: 100%;
+			display: table;
+			text-align: center;
+			width: 100%;
+			h4 {
+				font-size: 1.2em;
+				display: table-cell;
+				vertical-align: middle;
+				line-height: normal;
+			}
+		}
+	}
+	.issuePreview {
+		width: 33%;
+		height: 100%;
+		display: inline-block;
+		background-color: $bgColor;
+		position: absolute;
+		right: 0;
+		//  @include border-radius(0, 8px, 8px, 0);
+		.alignFix {
+			height: 100%;
+			display: table;
+			text-align: center;
+			width: 100%;
+			p {
+				display: table-cell;
+				vertical-align: middle;
+				line-height: normal;
+				font-size: 0.9em;
+				@media #{$tablet} {
+					font-size: 0.8em;
+				}
+				padding: 0 5px;
+				span {
+					font-size: 3em;
+				}
+			}
+		}
+	}
+	&:hover {
+		background-color: $activeColor;
+		border: 4px solid $activeColor;
+		transition: 0.5s;
+		.alignFix {
+			h4 {
+				color: white;
+				transition: 0.5s;
+			}
+		}
+	}
+	&:active {
+		opacity: 0.5;
+		transition: 0.5s;
+	}
+}
+.editButtonSmall {
+    color: $editColor;
+	
+    svg {
+		max-height: 27px;
+		max-width: 27px;
+		margin: 8px;
+        padding-left: 4px;
+        .st0{fill:none;stroke:$inactiveColor ;stroke-width:42;stroke-linecap:round;}
+        .st1{fill:$inactiveColor ;}
+	}
+	&:hover {
+		color: $pTextColor;
+        transition: 0.5s;
+		svg {
+			 .st0{stroke:$activeColor}
+            .st1{fill:$activeColor ;}
+		}
+	}
+}
+.editButtonBig {
+    color: $editColor;
+        svg {
+            display: inline-block;
+            max-height: 35px;
+            max-width: 35px;
+            margin: 8px;
+            padding-left: 6px;
+            .st0{fill:none;stroke:$activeColor ;stroke-width:42;stroke-linecap:round;}
+            .st1{fill:$activeColor ;}
+	       }  
+    &:hover {
+		color: $pTextColor;
+        transition: 0.5s;
+		svg {
+			 .st0{stroke:$activeColor}
+            .st1{fill:$activeColor ;}
+		}
+    }
+}
+.contentContainer {
+	//margin-left: 50px;
+}
+@media all and (max-width: 1240px) {
+	.bigDepartment {
+		.departmentName {
+			.alignFix {
+				h3 {
+					font-size: 1.8em;
+				}
+			}
+		}
+	}
+}
+@media all and (max-width: 1024px) {
+	.containerOtherDepartments,
+	.containerOtherProjects {
+		h2 {
+			font-size: 1.8em;
+		}
+	}
+	.aDepartment {
+		.departmentName {
+			.alignFix {
+				h4 {
+					font-size: 1.0em;
+				}
+			}
+		}
+	}
+}
+@media all and (max-width: 950px) {
+	.containerOtherDepartments,
+	.containerOtherProjects {
+		display: inline-block;
+		h2 {
+			font-size: 1.5em;
+		}
+	}
+}
+@media all and (max-width: 830px) {
+	.containerOtherProjects {
+		width: 55%;
+		margin: 0 0;
+		padding: 0 0;
+	}
+}
