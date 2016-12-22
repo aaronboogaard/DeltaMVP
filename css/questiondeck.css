@@ -1,0 +1,366 @@
+/*
+@mixin sidebar{
+    @include sidebarWidth;
+    height: 100%;
+    color: white;
+    background-color: $bgColor;
+    @include shadowRight;
+    position: fixed;
+
+        .sidebarMenu{
+        @include sidebarWidth;
+        text-align: center;
+
+        a{
+            @include sidebarWidth;
+            display: inline-block;
+            padding: 3vh 0;
+
+            img{
+                width: 33%;
+                opacity: 0.5;
+            }
+
+            &:hover{
+                background-color: $activeColorOpacity;
+                transition: 0.5s;
+
+                img{
+                    opacity: 1;
+                }
+            }
+
+            &:active{
+                @include insetShadow;
+                transition: 0.1s;
+            }
+        }
+
+        .active{
+            background-color: $activeColor;
+            img{
+                opacity: 1;
+            }
+        }
+    }
+
+    .sidebarProfile {
+        @include sidebarWidth;
+        text-align: center;
+
+        img{
+            display: inline-block;
+            width: 66%;
+            border: 1px rgba(255,255,255, 0.5) solid;
+            @include border-radius(50%, 50%, 50%, 50%);
+        }
+    }
+
+    .sidebarFooter{
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        @include sidebarWidth;
+
+        .keenLogo{
+            width: 50%;
+            display: inline-block;
+            margin-top: 3vh;
+        }
+
+        p {
+            font-size: 0.8em;
+            color: $sTextColor;
+            margin-top: 1.5vh;
+            padding-bottom: 10px
+        }
+
+        span{
+            color: $activeColor;
+        }
+    }
+}
+@mixin containterPage{
+    display: inline-block;
+    position: absolute;
+    padding-left: 1vw;
+    left: 100px;
+}
+*/
+/*@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+
+  }
+}*/
+body {
+  background-color: #F2EEE8;
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  color: #4B453A;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.42857143;
+  width: 100%;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+option {
+  color: black;
+}
+
+.header {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  background-color: #FFFBF5;
+  height: 45px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.header .headerButtons, .header h4 {
+  flex-basis: 1 auto;
+  padding: 0 10px;
+}
+.header .headerButtons {
+  width: 80px;
+}
+.header h4 {
+  font-size: 16px;
+  padding-top: 5px;
+}
+.header .askButton {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -ms-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  background-color: #80A8CC;
+  color: #FFFFFF;
+  padding: 5px 10px 5px 5px;
+}
+.header .askButton img {
+  height: 20px;
+}
+.header .profileButton img {
+  height: 25px;
+  float: right;
+}
+.header h4 {
+  text-transform: uppercase;
+}
+
+.containterBody {
+  padding-top: 45px;
+  z-index: 0;
+  width: 100%;
+  top: 0px;
+}
+
+.menu {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  background-color: #80A8CC;
+  height: 75px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  bottom: 0;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+.menu .menuButtonContainer {
+  flex-basis: 1;
+}
+.menu .menuButtonContainer a {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+.menu .menuButtonContainer a img {
+  height: 40px;
+  margin: 5px auto;
+  display: block;
+  opacity: 0.5;
+}
+.menu .menuButtonContainer .active {
+  opacity: 1;
+}
+.menu .menuButtonContainer .active img {
+  opacity: 1;
+}
+
+.questionDeck {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  justify-content: center;
+}
+
+.deckBackground, .deckContent {
+  width: 100%;
+  height: 450px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.deckBackground {
+  z-index: -10px;
+}
+.deckBackground svg {
+  width: 375px;
+  height: 450px;
+}
+
+.deckContent {
+  width: 375px;
+  height: 450px;
+  padding: 10px 25px 15px;
+}
+
+.deckContentHeader {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  height: 40px;
+  justify-content: stretch;
+  align-content: space-between;
+  width: 100%;
+}
+.deckContentHeader .timestamp {
+  flex-basis: 1;
+  opacity: 0.75;
+  display: block;
+}
+.deckContentHeader .poster {
+  flex-basis: 1;
+  display: block;
+}
+.deckContentHeader img {
+  height: 40px;
+  display: inline-block;
+  padding: 0 auto;
+}
+
+/*# sourceMappingURL=questiondeck.css.map */

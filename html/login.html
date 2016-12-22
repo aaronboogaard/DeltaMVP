@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delta</title>
+
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+<!--    <link rel="shortcut icon" href="../img/favicon/favicon.ico" th:src="@{/css/favicon.ico}"/>-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="contents">
+            <div class="textAbove">
+<!--                <h1>Delta System</h1>-->
+                <h2 id="welcomeBack">Welcome Back!</h2>
+            </div>
+            <div class="logInText">
+                <p>Log in</p>
+            </div>
+            <div class="userLog">
+                <form method="post">
+                    <div class="logInForm">
+                        <input type="email" name="username" id="email" required="required" maxlength="254" placeholder="Email" />
+                        <input type="password" name="password" id="password" required="required" maxlength="254" placeholder="Password"/>
+                        
+                        <div class="rememberMe">
+                         <label class="keenCustomCB keenCustomCB--checkbox"> Remember me
+                                <input type="checkbox" checked="checked"/>
+                                <div class="keenCustomCB__indicator"></div>
+                        </label>
+                        </div>
+                        <a href="questiondeck.html" class="forgotPassword" alt="forgot password?">Forgot your password?</a>
+                    </div>
+                    <input class="logInButton" type="submit" value="Login to account" />
+                </form>
+            </div>
+<!--
+            <div class="switchLogInSignUp">
+                <p>Don't have an account yet? Create one!</p>
+                <a href="register.html" class="switchButton">Sign Up</a>
+            </div>
+-->
+        </div>
+    </div>
+    <footer>
+        <img src="../img/deltaIconHighQuality.png" alt="logoDelta"/>
+        <p>
+            All rights reserved<br/>
+            &copy; M&amp;O Partners BV, 2016
+             <!--| <a href="#">Terms &amp; Conditions</a>-->
+        </p>
+    </footer>
+</body>
+</html>

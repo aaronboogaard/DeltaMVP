@@ -1,0 +1,604 @@
+/*
+@mixin sidebar{
+    @include sidebarWidth;
+    height: 100%;
+    color: white;
+    background-color: $bgColor;
+    @include shadowRight;
+    position: fixed;
+
+        .sidebarMenu{
+        @include sidebarWidth;
+        text-align: center;
+
+        a{
+            @include sidebarWidth;
+            display: inline-block;
+            padding: 3vh 0;
+
+            img{
+                width: 33%;
+                opacity: 0.5;
+            }
+
+            &:hover{
+                background-color: $activeColorOpacity;
+                transition: 0.5s;
+
+                img{
+                    opacity: 1;
+                }
+            }
+
+            &:active{
+                @include insetShadow;
+                transition: 0.1s;
+            }
+        }
+
+        .active{
+            background-color: $activeColor;
+            img{
+                opacity: 1;
+            }
+        }
+    }
+
+    .sidebarProfile {
+        @include sidebarWidth;
+        text-align: center;
+
+        img{
+            display: inline-block;
+            width: 66%;
+            border: 1px rgba(255,255,255, 0.5) solid;
+            @include border-radius(50%, 50%, 50%, 50%);
+        }
+    }
+
+    .sidebarFooter{
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        @include sidebarWidth;
+
+        .keenLogo{
+            width: 50%;
+            display: inline-block;
+            margin-top: 3vh;
+        }
+
+        p {
+            font-size: 0.8em;
+            color: $sTextColor;
+            margin-top: 1.5vh;
+            padding-bottom: 10px
+        }
+
+        span{
+            color: $activeColor;
+        }
+    }
+}
+@mixin containterPage{
+    display: inline-block;
+    position: absolute;
+    padding-left: 1vw;
+    left: 100px;
+}
+*/
+/*@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+
+  }
+}*/
+body {
+  background-color: #F2EEE8;
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  color: #4B453A;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.42857143;
+  width: 100%;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+option {
+  color: black;
+}
+
+body {
+  background-color: #80A8CC;
+}
+
+.container {
+  width: 40vw;
+  margin: 10px auto 25px;
+  text-align: center;
+  color: white;
+}
+
+h2#welcomeBack {
+  font-weight: lighter;
+  margin: 25px 0 15px 0;
+  font-size: 2em;
+}
+
+h2#welcomeFirst {
+  font-weight: lighter;
+  margin: 5px 0 10px;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.logInText p {
+  overflow: hidden;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 1.3em;
+  color: #FFFFFF;
+}
+
+.logInText p:before,
+.logInText p:after {
+  background-color: #FFFFFF;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.logInText p:before {
+  right: 1.5em;
+  margin-left: -50%;
+}
+
+.logInText p:after {
+  left: 1.5em;
+  margin-right: -50%;
+}
+
+.logInForm input[type="email"], .logInForm input[type="text"], .logInForm input[type="password"] {
+  width: 100%;
+  min-height: 45px;
+  background: white;
+  border: solid 2px white;
+  transition: box-shadow 0.3s, border 0.3s;
+  text-indent: 1em;
+  color: black;
+  margin: 3px auto;
+  display: block;
+}
+
+.logInForm input[type="email"]:focus, .logInForm input[type="text"]:focus, .logInForm input[type="password"]:focus {
+  border: solid 2px white;
+  box-shadow: 0 0 5px 1px white;
+  color: black;
+  background: white;
+  outline: none;
+}
+
+.rememberMe {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 5px 0;
+  float: left;
+}
+.rememberMe .keenCustomCB {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.rememberMe .keenCustomCB input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.rememberMe .keenCustomCB__indicator {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: white;
+  transition: 0.3s;
+}
+.rememberMe .keenCustomCB:hover input ~ .keenCustomCB__indicator,
+.rememberMe .keenCustomCB input:focus ~ .keenCustomCB__indicator {
+  background: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+}
+.rememberMe .keenCustomCB input:checked ~ .keenCustomCB__indicator {
+  background: #fff;
+  transition: 0.3s;
+}
+.rememberMe .keenCustomCB:hover input:not([disabled]):checked ~ .keenCustomCB__indicator,
+.rememberMe .keenCustomCB input:checked:hover ~ .keenCustomCB__indicator {
+  background: rgba(255, 255, 255, 0.7);
+}
+.rememberMe .keenCustomCB input:disabled ~ .keenCustomCB__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.rememberMe .keenCustomCB__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.rememberMe .keenCustomCB input:checked ~ .keenCustomCB__indicator:after {
+  display: block;
+}
+.rememberMe .keenCustomCB--checkbox .keenCustomCB__indicator:after {
+  left: 6px;
+  top: -1px;
+  width: 5px;
+  height: 14px;
+  border: solid #80A8CC;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+}
+.rememberMe .keenCustomCB--checkbox input:disabled ~ .keenCustomCB__indicator:after {
+  border-color: #7b7b7b;
+}
+.rememberMe .keenCustomCB--radio .keenCustomCB__indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+.rememberMe .keenCustomCB--radio input:disabled ~ .keenCustomCB__indicator:after {
+  background: #7b7b7b;
+}
+.rememberMe label {
+  font-weight: normal;
+}
+
+.forgotPassword {
+  color: #FFFFFF;
+  font-size: 1em;
+  float: right;
+  padding: 5px 0;
+  line-height: 20px;
+}
+.forgotPassword:hover {
+  text-decoration: none;
+  color: #4B453A;
+}
+
+.underForm {
+  margin: 1vh 0;
+  height: 1.5em;
+}
+
+.underForm input[type="checkbox"], .underForm label {
+  float: left;
+}
+
+.underForm label[for="cbRememberMe"] {
+  font-weight: lighter;
+  margin-left: 0.2em;
+}
+
+.underForm label[for="cbMailMe"] {
+  font-weight: lighter;
+  margin-left: 0.2em;
+  font-size: 1em;
+}
+
+.underForm a {
+  float: right;
+  color: white;
+  font-weight: normal;
+}
+
+.underForm a:hover {
+  text-decoration: none;
+  font-style: normal;
+}
+
+.logInButton, .createButton {
+  background: none;
+  border: 1px solid #FFFFFF;
+  width: 100%;
+  height: 4.5vh;
+  min-height: 45px;
+  font-size: 1.5em;
+  margin-top: 10px;
+  font-weight: lighter;
+  color: #FFFFFF;
+}
+.logInButton:hover, .createButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  transition: 0.3s;
+}
+.logInButton:active, .createButton:active {
+  -webkit-box-shadow: inset 0px 0px 30px 0px rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: inset 0px 0px 31px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px 0px 31px 0px rgba(255, 255, 255, 0.2);
+  transition: 0.1s;
+}
+
+.logInButton:focus, .createButton:focus {
+  outline: none;
+}
+
+.agreement {
+  font-weight: lighter;
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 1vh;
+}
+
+.agreement a {
+  color: #4F9689;
+  font-weight: normal;
+  font-size: 0.9em;
+}
+
+.agreement a:hover {
+  text-decoration: none;
+}
+
+.emailUpdates, .agreeToTerms {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 5px 0;
+  display: block;
+  float: left;
+}
+.emailUpdates .keenCustomCB, .agreeToTerms .keenCustomCB {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.emailUpdates .keenCustomCB input, .agreeToTerms .keenCustomCB input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.emailUpdates .keenCustomCB__indicator, .agreeToTerms .keenCustomCB__indicator {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: white;
+  transition: 0.3s;
+}
+.emailUpdates .keenCustomCB:hover input ~ .keenCustomCB__indicator,
+.emailUpdates .keenCustomCB input:focus ~ .keenCustomCB__indicator, .agreeToTerms .keenCustomCB:hover input ~ .keenCustomCB__indicator,
+.agreeToTerms .keenCustomCB input:focus ~ .keenCustomCB__indicator {
+  background: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+}
+.emailUpdates .keenCustomCB input:checked ~ .keenCustomCB__indicator, .agreeToTerms .keenCustomCB input:checked ~ .keenCustomCB__indicator {
+  background: #fff;
+  transition: 0.3s;
+}
+.emailUpdates .keenCustomCB:hover input:not([disabled]):checked ~ .keenCustomCB__indicator,
+.emailUpdates .keenCustomCB input:checked:hover ~ .keenCustomCB__indicator, .agreeToTerms .keenCustomCB:hover input:not([disabled]):checked ~ .keenCustomCB__indicator,
+.agreeToTerms .keenCustomCB input:checked:hover ~ .keenCustomCB__indicator {
+  background: rgba(255, 255, 255, 0.7);
+}
+.emailUpdates .keenCustomCB input:disabled ~ .keenCustomCB__indicator, .agreeToTerms .keenCustomCB input:disabled ~ .keenCustomCB__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.emailUpdates .keenCustomCB__indicator:after, .agreeToTerms .keenCustomCB__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.emailUpdates .keenCustomCB input:checked ~ .keenCustomCB__indicator:after, .agreeToTerms .keenCustomCB input:checked ~ .keenCustomCB__indicator:after {
+  display: block;
+}
+.emailUpdates .keenCustomCB--checkbox .keenCustomCB__indicator:after, .agreeToTerms .keenCustomCB--checkbox .keenCustomCB__indicator:after {
+  left: 6px;
+  top: -1px;
+  width: 5px;
+  height: 14px;
+  border: solid #80A8CC;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+}
+.emailUpdates .keenCustomCB--checkbox input:disabled ~ .keenCustomCB__indicator:after, .agreeToTerms .keenCustomCB--checkbox input:disabled ~ .keenCustomCB__indicator:after {
+  border-color: #7b7b7b;
+}
+.emailUpdates .keenCustomCB--radio .keenCustomCB__indicator:after, .agreeToTerms .keenCustomCB--radio .keenCustomCB__indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+.emailUpdates .keenCustomCB--radio input:disabled ~ .keenCustomCB__indicator:after, .agreeToTerms .keenCustomCB--radio input:disabled ~ .keenCustomCB__indicator:after {
+  background: #7b7b7b;
+}
+.emailUpdates label, .agreeToTerms label {
+  font-weight: normal;
+}
+.emailUpdates label a, .agreeToTerms label a {
+  color: #FFFFFF;
+}
+.emailUpdates label a:hover, .agreeToTerms label a:hover {
+  color: #555459;
+}
+
+.switchLogInSignUp {
+  margin-top: 1.5vh;
+  border-top: 1px solid #FFFFFF;
+  width: 100%;
+  display: block;
+  height: 40px;
+}
+
+.switchLogInSignUp p {
+  margin-top: 1vh;
+  float: left;
+  line-height: 2em;
+  border: 1px solid transparent;
+}
+
+.switchLogInSignUp a {
+  float: right;
+  margin-top: 1vh;
+  line-height: 2em;
+  padding: 0 1.5em;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
+.switchLogInSignUp a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.switchLogInSignUp a:active {
+  -webkit-box-shadow: inset 0px 0px 30px 0px rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: inset 0px 0px 31px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px 0px 31px 0px rgba(255, 255, 255, 0.2);
+  transition: 0.1s;
+}
+
+.passwordReset .logInForm {
+  padding-bottom: 10px;
+}
+
+footer {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: white;
+  font-weight: lighter;
+  font-size: 0.7em;
+  bottom: 0;
+}
+
+footer img {
+  height: 100px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  opacity: 0.5;
+}
+
+footer p {
+  margin-top: 10px;
+}
+
+footer a {
+  color: #555459;
+  font-weight: normal;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+@media all and (max-width: 1150px) {
+  .container {
+    width: 55vw;
+  }
+}
+@media all and (max-width: 900px) {
+  .container {
+    width: 60vw;
+  }
+}
+@media all and (max-width: 800px) {
+  .container {
+    width: 70vw;
+  }
+}
+@media all and (max-width: 690px) {
+  .container {
+    width: 90vw;
+  }
+
+  .rememberMe, .forgotPassword {
+    float: none;
+  }
+
+  .forgotPassword {
+    padding: 15px 0;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

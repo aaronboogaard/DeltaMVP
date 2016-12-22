@@ -1,6 +1,6 @@
 body{
     background-color: $bgColor;
-    @include font;
+    font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
     color: $pTextColor;
     margin: 0;
     font-size: 14px;

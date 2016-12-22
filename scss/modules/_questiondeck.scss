@@ -1,0 +1,52 @@
+.questionDeck{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    @include displayFlex;
+    flex-direction: row;
+    justify-content: center;
+}
+.deckBackground, .deckContent{
+    width: 100%;
+    height: 450px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.deckBackground{
+    z-index: -10px;
+    svg{
+        width: 375px;
+        height: 450px;
+    }
+}
+
+.deckContent{
+    width: 375px;
+    height: 450px;
+    padding: 10px 25px 15px;
+}
+.deckContentHeader{
+    @include displayFlex;
+    height: 40px;
+    justify-content: stretch;
+    align-content: space-between;
+    width: 100%;
+    .timestamp{
+        flex-basis: 1;
+        opacity: 0.75;
+        display: block;
+        //max-width: 100px;
+    }
+    .poster{
+        flex-basis: 1;
+        display: block;
+    }
+    img{
+        height: 40px;
+        display: inline-block;
+        padding: 0 auto;
+        
+    }
+}
