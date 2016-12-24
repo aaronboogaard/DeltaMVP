@@ -193,6 +193,9 @@ option {
   align-items: center;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 .header .headerButtons, .header h4 {
   flex-basis: 1 auto;
@@ -293,51 +296,13 @@ option {
   opacity: 1;
 }
 
-.topActionButton {
-  margin: 10px auto;
-  width: 275px;
-}
-.topActionButton a {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  /* NEW - Chrome */
-  display: flex;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  border: 2px solid #80A8CC;
-  background-color: #FFFBF5;
-  color: #80A8CC;
-  font-size: 20px;
-  font-weight: 400;
-  padding: 5px 20px 5px 5px;
-}
-.topActionButton a img {
-  height: 40px;
-  margin-left: 10px;
-}
-
 .listOfPosts {
   background-color: #FFFBF5;
   width: 90vw;
-  margin: 0 auto 75px;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  margin: 10px auto 75px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   padding: 5px 10px;
 }
 
@@ -383,6 +348,11 @@ option {
 .post .postHeader .postHeaderDetails {
   flex-basis: 2;
 }
+.post .postHeader .postHeaderDetails a {
+  padding: 0 0;
+  margin: 0 0;
+  color: #4B453A;
+}
 .post .postHeader .postHeaderDetails p {
   margin: 0 0;
   padding: 0 0;
@@ -408,4 +378,4 @@ option {
   border-bottom: 1px solid #CACACA;
 }
 
-/*# sourceMappingURL=questions.css.map */
+/*# sourceMappingURL=global.css.map */

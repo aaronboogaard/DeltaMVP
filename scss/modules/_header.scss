@@ -10,6 +10,7 @@
     align-items: center;
     -webkit-justify-content: space-between;
     justify-content: space-between;
+    @include shadow;
 
     .headerButtons, h4{
         flex-basis: 1 auto;

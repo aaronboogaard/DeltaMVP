@@ -1,0 +1,56 @@
+$postWidth: 90vw;
+.listOfPosts{
+    background-color: $brokenWhite;
+    width: $postWidth;
+    margin: 10px auto $menuHeight;
+    @include heavyshadow;
+    padding: 5px 10px;
+}
+.post{
+    color: $pTextColor;
+    .postHeader{
+        @include displayFlex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        width: 100%;
+
+        .postHeaderIcons{
+            display: inline-block;
+            @include displayFlex;
+            align-items: center;
+            img{
+                height: 30px;
+                display: inline-block;
+                margin: 5px 5px;
+            }
+        }
+        .postHeaderDetails{
+            flex-basis: 2;
+            a{
+                padding: 0 0;
+                margin: 0 0;
+                color: $pTextColor;
+            }
+            p{
+                margin: 0 0;
+                padding: 0 0;
+            }
+            .timestamp{
+                opacity: 0.75;
+            }
+        }
+    }
+    .postContent{
+        margin: 5px 0;
+        padding: 0;
+        p{
+            max-width: $postWidth; 
+            @include paragraphFix;
+            &:last-child{
+             border-bottom: 1px solid $inactiveColor;
+            }
+        }
+    }
+}
