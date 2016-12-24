@@ -13,13 +13,14 @@
     justify-content: space-around;
     
     .menuButtonContainer{
-        flex-basis: 1;
+        flex: 1;
+        text-align: center;
         a{
             height: 100%;
             width: 100%;
-            text-align: center;
             color: $wTextColor;
             opacity: 0.5;
+            font-size: 11px;
             
             img{
                 height: 40px;

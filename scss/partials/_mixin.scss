@@ -1,20 +1,27 @@
-@mixin border-radius($radiustopleft, $radiustopright, $radiusbottomright, $radiusbottomleft) {
-  -webkit-border-radius: $radiustopleft $radiustopright $radiusbottomright  $radiusbottomleft;
-     -moz-border-radius: $radiustopleft $radiustopright $radiusbottomright  $radiusbottomleft;
-      -ms-border-radius: $radiustopleft $radiustopright $radiusbottomright  $radiusbottomleft;
-          border-radius: $radiustopleft $radiustopright $radiusbottomright  $radiusbottomleft;
-}
-
-@mixin shadowRight{
-    -webkit-box-shadow: 2px 0 5px 0px $shadowColor;
-    -moz-box-shadow: 2px 0 5px 0px $shadowColor;
-    box-shadow: 2px 0 5px 0px $shadowColor;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
 }
 
 @mixin shadow{
     -webkit-box-shadow: 2px 2px 5px 0px $shadowColor;
     -moz-box-shadow: 2px 2px 5px 0px $shadowColor;
     box-shadow: 2px 2px 5px 0px $shadowColor;
+}
+
+@mixin paragraphFix{
+    white-space: pre-line;
+    //word-wrap: auto;
+    text-align: left;
+    //text-justify: distribute;
+    margin: 1em 0 0;
+    padding: 0;
+    //overflow-y: hidden;
+    &:first-child{
+        margin-top: 0;
+    }
 }
 
 @mixin insetShadow{

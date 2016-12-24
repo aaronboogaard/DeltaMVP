@@ -25,7 +25,7 @@
     
     .askButton{
         @include displayFlex;
-        @include border-radius (10px, 10px, 10px, 10px);
+        @include border-radius (10px);
         -webkit-align-items: stretch;
         align-items: stretch;
         -webkit-justify-content: space-between;

@@ -1,0 +1,49 @@
+@mixin tinderMenuButton($color){
+    background-color: $brokenWhite;
+    width: 85px;
+    text-align: center;
+    border: 2px solid $color;
+    @include border-radius (5px);
+    @include shadow;
+
+    a{
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        color: $color;
+        opacity: 1;
+
+        img{
+            height: 30px;
+            margin: 5px auto 0;
+            display: block;
+        }
+    }    
+}
+
+@mixin topButton{
+    margin: 10px auto;
+    width: 275px;
+    a{
+        @include displayFlex;
+        @include shadow;
+        @include border-radius (5px);
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        border: 2px solid $activeColor;
+        
+        background-color: $brokenWhite;
+        color: $activeColor;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 5px 20px 5px 5px;
+        
+        img{
+            height: 40px;
+            margin-left: 10px;
+        }
+    }
+}
+

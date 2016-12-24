@@ -1,13 +1,14 @@
+$heightDeck: 450px;
+$widthDeck: 375px;
+
 .questionDeck{
     position: relative;
-    width: 100%;
+    width: 375px;
     height: 450px;
-    @include displayFlex;
-    flex-direction: row;
-    justify-content: center;
+    margin: 5px auto 0;
 }
 .deckBackground, .deckContent{
-    width: 100%;
+    width: 375px;
     height: 450px;
     position: absolute;
     top: 0;
@@ -25,28 +26,86 @@
 .deckContent{
     width: 375px;
     height: 450px;
-    padding: 10px 25px 15px;
+    padding: 2px 25px 15px;
+    color: $wTextColor;
 }
 .deckContentHeader{
     @include displayFlex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
     height: 40px;
-    justify-content: stretch;
-    align-content: space-between;
     width: 100%;
-    .timestamp{
-        flex-basis: 1;
-        opacity: 0.75;
-        display: block;
-        //max-width: 100px;
+    border-bottom: 1px solid white;
+    
+    .headerLogoTimestamp{
+        display: inline-block;
+        @include displayFlex;
+        align-items: center;
+        img{
+            height: 30px;
+            display: inline-block;
+            margin: 5px 5px;
+        }
+        
+        .timestamp{
+            opacity: 0.75;
+            display: block;
+            max-width: 125px;
+            display: inline-block;
+            text-align: center;
+            margin: 0 5px;
+        }
     }
     .poster{
-        flex-basis: 1;
-        display: block;
+        color: $wTextColor;
+        flex-basis: 2;
+        text-align: right;
+        font-weight: 500;
+        span{
+            font-weight: normal;
+            opacity: 0.75;
+        }
     }
-    img{
-        height: 40px;
-        display: inline-block;
-        padding: 0 auto;
-        
+}
+.deckContentText{
+    height: $heightDeck - 75px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+    p{
+        max-width: 375px;
+        @include paragraphFix;
+    }
+}
+
+.deckButtons{
+    width: $widthDeck;
+    margin: 0 auto;
+    padding: 0 5px;
+    @include displayFlex;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    
+    .deckButtonDontKnow{
+        @include tinderMenuButton($red);
+    }
+    .deckButtonLater{
+        @include tinderMenuButton($activeColor);
+        margin-top: 25px;
+    }
+    .deckButtonSeeAnswers{
+        @include tinderMenuButton($activeColor);
+        margin-top: 25px;
+        a{
+            font-size: 12px;
+        }
+    }
+    .deckButtonAnswer{
+        @include tinderMenuButton($green);
     }
 }
