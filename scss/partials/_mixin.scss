@@ -29,6 +29,14 @@
         margin-top: 0;
     }
 }
+@mixin h4styling{
+    h4{
+        margin: 5px 0 5px;
+        padding: 0 0;
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
 
 @mixin insetShadow{
     -webkit-box-shadow: inset 0px 0px 30px 0px $insetShadowColor;
@@ -48,113 +56,6 @@
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-}
-
-@mixin noSelect{
-    /*supported from IE 9 and up */
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Chrome/Safari/Opera */
-     -khtml-user-select: none; /* Konqueror */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  not supported by any browser */
-} 
-
-@mixin greenButton($height){
-    a{
-                border: 2px solid $activeColor;
-                //background-color: $buttonBackgroudColor;
-                color: $activeColor;
-                font-size: 1.2em;
-                line-height: 1.2em; 
-                padding: $height 25px;
-                transition: 0.5s;
-                @include shadowRight;
-                @include border-radius (25px, 25px, 25px, 25px);
-
-                &:hover{
-                    background-color: $activeColor;
-                    border: 2px solid $activeColor;
-                    color: white;
-                    transition: 0.5s;
-                    text-decoration: none;
-                }
- 
-                &:active{
-                    opacity: 0.5;
-                    transition: 0.5s;
-        }
-            }
-}
-
-@mixin redButton($height){
-    a{
-        border: 2px solid #FA5D5E;
-        color: #FA5D5E;
-        font-size: 1.2em;
-        line-height: 1.2em;
-        transition: 0.5s;
-        padding: $height 25px;
-        @include shadowRight;
-        @include border-radius (25px, 25px, 25px, 25px);
-
-        &:hover{
-            background-color: #FA5D5E;
-            border: 2px solid #FA5D5E;
-            color: white;
-            transition: 0.5s;
-            text-decoration: none;
-        }
-
-        &:active{
-            opacity: 0.5;
-            transition: 0.5s;
-        }
-    }
-}
-
-@mixin greyButton($height){
-    a{
-        border: 2px solid $disabledButtonColor;
-        color: $disabledButtonColor;
-        font-size: 1.2em;
-        line-height: 1.2em;
-        transition: 0.5s;
-        padding: $height 25px;
-        @include shadowRight;
-        @include border-radius (25px, 25px, 25px, 25px);
-        
-        &:hover{
-            background-color: $disabledButtonColor;
-            border: 2px solid $disabledButtonColor;
-            color: white;
-            transition: 0.5s;
-            text-decoration: none;
-        }
-
-        &:active{
-            opacity: 0.5;
-            transition: 0.5s;
-        }
-    }
-}
-
-@mixin nonClickableButton($height){
-    a{
-        border: 2px solid rgba(255,255,255, 0.3);
-        color: rgba(255,255,255, 0.3);
-        font-size: 1.2em;
-        line-height: 1.2em;
-        transition: 0.5s;
-        padding: $height 25px;
-        @include shadowRight;
-        @include border-radius (25px, 25px, 25px, 25px);
-        
-        &:hover{
-            cursor: default;
-        }
-    }
 }
 
 @mixin squaredButton($contrastColor){
@@ -179,31 +80,39 @@
 
 }
 
-@mixin broadGreenButton($height){
-    a{
-                border: 2px solid $activeColor;
-                width: 100%;
-                color: $activeColor;
-                font-size: 1.2em;
-                line-height: 1.2em; 
-                padding: $height auto;
-                transition: 0.5s;
-                @include shadowRight;
-                @include border-radius (25px, 25px, 25px, 25px);
+@mixin textAreastyling{
+    resize: none;
+    display: inline-block;
+    margin: 0 0;
+    width: 100%;
+    font-size: 15px;
+    background-color: $bgColor;
+    @include border-radius(10px);
+    color: $pTextColor;
+    border: 1px solid #DAD8D7;
+    overflow: auto;
 
-                &:hover{
-                    background-color: $activeColor;
-                    border: 2px solid $activeColor;
-                    color: white;
-                    transition: 0.5s;
-                    text-decoration: none;
-                }
+//    -webkit-appearance: none;
+//    -moz-appearance: none;
+//    appearance: none;
+//    -ms-border-radius: none;
+//    -o-border-radius: none;
 
-                &:active{
-                    opacity: 0.5;
-                    transition: 0.5s;
-        }
-            }
+    padding: 5px 5px;
+
+//        border: none;
+//        border-bottom: solid 3px $inactiveColor;
+//        //border-top: solid 1px $inactiveColor;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s;
+
+    &:focus{
+        outline:none;
+     //   border-top: solid 1px $activeColor;
+
+    }
 }
 
 

@@ -1,4 +1,4 @@
-$postWidth: 90vw;
+
 .listOfPosts{
     background-color: $brokenWhite;
     width: $postWidth;
@@ -45,11 +45,14 @@ $postWidth: 90vw;
     .postContent{
         margin: 5px 0;
         padding: 0;
-        p{
-            max-width: $postWidth; 
-            @include paragraphFix;
-            &:last-child{
-             border-bottom: 1px solid $inactiveColor;
+        a{
+            color: $pTextColor;
+            p{
+                max-width: $postWidth; 
+                @include paragraphFix;
+                &:last-child{
+                 border-bottom: 1px solid $inactiveColor;
+                }
             }
         }
     }

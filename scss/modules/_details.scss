@@ -1,0 +1,68 @@
+.answers{
+    @include h4styling;
+    text-align: center;
+    h4{
+         border-bottom: 1px solid $inactiveColor;
+        padding-bottom: 5px;
+    }
+    .answerHeader{
+        color: $pTextColor;
+        text-align: left;
+        p{
+            margin: 0 0;
+            padding: 0 0;
+            a{
+                color: $pTextColor;
+                font-weight: 500;
+            }
+        }
+    }
+    .answerContent{
+        margin: 5px 0;
+        padding: 0;
+        a{
+            color: $pTextColor;
+            p{
+                max-width: $postWidth; 
+                @include paragraphFix;
+                &:last-child{
+                border-bottom: 1px solid $inactiveColor;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+.belowAnswersButtons{
+    @include displayFlex;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 100%;
+//    .belowAnswersButton{
+//        background-color: $activeColor;
+//        color: $wTextColor;
+//        padding: 5px 10px 5px 5px;
+//        img{
+//            height: 20px
+//        }
+//    }
+    .closeButton, .answerButton{
+        @include displayFlex;
+        @include border-radius (10px);
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+        width: 100px;
+        background-color: $activeColor;
+        color: $wTextColor;
+        padding: 5px 5px 5px 5px;
+        font-size: 16px;
+        img{
+            height: 25px;
+        }
+    }
+}

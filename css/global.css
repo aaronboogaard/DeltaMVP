@@ -106,6 +106,9 @@ body {
   line-height: 1.42857143;
   width: 100%;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 html {
   -webkit-box-sizing: border-box;
@@ -233,6 +236,34 @@ option {
 }
 .header .askButton img {
   height: 20px;
+}
+.header .dismissButton {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 70px;
+  background-color: #80A8CC;
+  color: #FFFFFF;
+  padding: 5px 8px 5px 5px;
+}
+.header .dismissButton img {
+  height: 15px;
+  margin-top: 2px;
 }
 .header .profileButton img {
   height: 25px;
@@ -364,18 +395,204 @@ option {
   margin: 5px 0;
   padding: 0;
 }
-.post .postContent p {
+.post .postContent a {
+  color: #4B453A;
+}
+.post .postContent a p {
   max-width: 90vw;
   white-space: pre-line;
   text-align: left;
   margin: 1em 0 0;
   padding: 0;
 }
-.post .postContent p:first-child {
+.post .postContent a p:first-child {
   margin-top: 0;
 }
-.post .postContent p:last-child {
+.post .postContent a p:last-child {
   border-bottom: 1px solid #CACACA;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 10;
+  /* Sit on top */
+  padding-top: 50px;
+  /* Location of the box */
+  padding-bottom: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #F2EEE8;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #FFFBF5;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 90vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: 300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: 300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+/* The Close Button */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #80A8CC;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #80A8CC;
+  color: white;
+}
+
+.profile {
+  text-align: center;
+  background-color: #80A8CC;
+}
+.profile .closeButton {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.profile .closeButton:hover, .profile .closeButton:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.enterQuestion .enterQuestionHeader {
+  width: 100%;
+  margin-top: 5px;
+  text-align: center;
+}
+.enterQuestion .enterQuestionHeader h3 {
+  color: #80A8CC;
+  font-weight: normal;
+  margin: 0 auto;
+  padding: 5px 0;
+  font-size: 25px;
+}
+.enterQuestion .enterQuestionTextArea {
+  padding: 5px 0;
+}
+.enterQuestion .enterQuestionTextArea textarea {
+  resize: none;
+  display: inline-block;
+  margin: 0 0;
+  width: 100%;
+  font-size: 15px;
+  background-color: #F2EEE8;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  color: #4B453A;
+  border: 1px solid #DAD8D7;
+  overflow: auto;
+  padding: 5px 5px;
+  -webkit-transition: border 0.3s;
+  -moz-transition: border 0.3s;
+  -o-transition: border 0.3s;
+  transition: border 0.3s;
+  min-height: 33vh;
+}
+.enterQuestion .enterQuestionTextArea textarea:focus {
+  outline: none;
+}
+
+.belowQuestionButtons {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+.belowQuestionButtons .closeButton, .belowQuestionButtons .askButton {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  width: 100px;
+  background-color: #80A8CC;
+  color: #FFFFFF;
+  padding: 5px 5px 5px 5px;
+  font-size: 16px;
+}
+.belowQuestionButtons .closeButton img, .belowQuestionButtons .askButton img {
+  height: 25px;
 }
 
 /*# sourceMappingURL=global.css.map */

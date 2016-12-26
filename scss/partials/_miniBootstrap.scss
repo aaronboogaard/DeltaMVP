@@ -6,6 +6,8 @@ body{
     font-size: 14px;
     line-height: 1.42857143;
     width: 100%;
+    
+    &::-webkit-scrollbar {display:none;}
 }
 
 html {

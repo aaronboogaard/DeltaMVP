@@ -39,6 +39,22 @@
             height: 20px
         }
     }
+    .dismissButton{
+        @include displayFlex;
+        @include border-radius (10px);
+        -webkit-align-items: stretch;
+        align-items: stretch;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        width: 70px;
+        background-color: $activeColor;
+        color: $wTextColor;
+        padding: 5px 8px 5px 5px;
+        img{
+            height: 15px;
+            margin-top: 2px;
+        }
+    }
     .profileButton{
         img{
             height: 25px;

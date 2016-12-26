@@ -1,0 +1,83 @@
+.timeframeButtons{
+    background-color: $brokenWhite;
+    width: $rankingWidth;
+    margin: 10px auto 0;
+    @include displayFlex;
+    
+    a{
+        flex: 1;
+        font-size: 20px;
+        text-align: center;
+        padding: 5px 0;
+        border: 2px solid $activeColor;
+        color: $activeColor;
+    }
+    .active{
+            color: $wTextColor;
+            background-color: $activeColor;
+        }
+}
+.listOfRanking{
+    background-color: $brokenWhite;
+    width: $rankingWidth;
+    margin: 0 auto $menuHeight;
+    @include shadow;
+    padding: 5px 10px;
+    display: none;
+}
+.ranking{
+    -webkit-animation: fadeEffect 0.75s;
+    animation: fadeEffect 0.75s; /* Fading effect takes 1 second */
+
+    @-webkit-keyframes fadeEffect {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes fadeEffect {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    color: $pTextColor;
+    .rankingHeader{
+        h3{
+            color: $activeColor;
+            margin: 5px 0 0;
+            padding: 0 0;
+            font-size: 25px;
+        }
+    }
+    .rankingPersonal{
+        padding: 10px 10px 0;
+        p{
+            max-width: $postWidth;
+            @include paragraphFix;
+            font-weight: 600;
+            &:last-child{
+             border-bottom: 1px solid $inactiveColor;
+                padding-bottom: 10px;
+            }
+            span{
+                float: right;
+                font-weight: normal;
+            }
+        }
+    }
+    .rankingGlobal{
+        padding: 0px 10px 0;
+        @include h4styling;
+        p{
+            max-width: $postWidth;
+            @include paragraphFix;
+            margin-top: 0px;
+            padding-left: 10px;
+            &:last-child{
+                padding-bottom: 10px;
+            }
+            span{
+                float: right;
+                font-weight: normal;
+            }
+        }
+    }
+}

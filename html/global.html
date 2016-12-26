@@ -12,7 +12,7 @@
 <body>
     <div class="header">
         <div class="headerButtons">
-            <a href="#" class="askButton"><img src="../img/post.png" alt="ask">Ask</a>
+            <a href="#" onclick="myFunction('You clicked!');" class="askButton"><img src="../img/post.png" alt="ask">Ask</a>
         </div>
         <h4 class="pageTitle">Global</h4>
         <div class="headerButtons">
@@ -51,15 +51,15 @@
                     </div>
                 </div>
                 <div class="postContent">
-                    <p>I got the call today, I didn't want to hear, but I knew that it would come. An old, true friend of ours was talkin' on the phone. She said:"You found someone?". And I thought of all the bad luck. And the struggles we went through. And how I lost me and you lost you.</p>
+                    <a href="#"><p>I got the call today, I didn't want to hear, but I knew that it would come. An old, true friend of ours was talkin' on the phone. She said:"You found someone?". And I thought of all the bad luck. And the struggles we went through. And how I lost me and you lost you.</p>
                         
-                        <p>What are these voices outside love's open door? Make us throw off our contentment and beg for something more?</p>
+                        <p>What are these voices outside love's open door? Make us throw off our contentment and beg for something more?</p></a>
                 </div>
             </div>
-                        <div class="post">
+                <div class="post">
                 <div class="postHeader">
                     <div class="postHeaderDetails">
-                        <a href="#" class="posterProfile">The guy from the coffeeshop</a>
+                        <a href="#" class="posterProfile">The girl from yesterday</a>
                         <p class="timestamp">6/66 at 12:34</p>
                     </div>
                     <div class="postHeaderIcons">
@@ -68,9 +68,9 @@
                     </div>
                 </div>
                 <div class="postContent">
-                    <p>I got the call today, I didn't want to hear, but I knew that it would come. An old, true friend of ours was talkin' on the phone. She said:"You found someone?". And I thought of all the bad luck. And the struggles we went through. And how I lost me and you lost you.</p>
+                    <a href="#"><p>I got the call today, I didn't want to hear, but I knew that it would come. An old, true friend of ours was talkin' on the phone. She said:"You found someone?". And I thought of all the bad luck. And the struggles we went through. And how I lost me and you lost you.</p>
                         
-                        <p>What are these voices outside love's open door? Make us throw off our contentment and beg for something more?</p>
+                        <p>What are these voices outside love's open door? Make us throw off our contentment and beg for something more?</p></a>
                 </div>
             </div>
                         <div class="post">
@@ -85,13 +85,52 @@
                     </div>
                 </div>
                 <div class="postContent">
-                    <p>I got the call today, I didn't want to hear, but I knew that it would come. An old, true friend of ours was talkin' on the phone. She said:"You found someone?". And I thought of all the bad luck. And the struggles we went through. And how I lost me and you lost you.</p>
+                    <a href="#"><p>I got the call today, I didn't want to hear, but I knew that it would come. An old, true friend of ours was talkin' on the phone. She said:"You found someone?". And I thought of all the bad luck. And the struggles we went through. And how I lost me and you lost you.</p>
                         
-                        <p>What are these voices outside love's open door? Make us throw off our contentment and beg for something more?</p>
+                        <p>What are these voices outside love's open door? Make us throw off our contentment and beg for something more?</p></a>
                 </div>
             </div>
         </div>
-    </div>    
+        <!-- The Modal -->
+        <div id="questionModal" class="modal">
+           Modal content 
+          <div class="modal-content">
+            <div class="modal-body">
+                <div class="enterQuestion">
+                    <div class="enterQuestionHeader">
+                        <h3>Ask Question</h3>
+                    </div>
+                    <div class="enterQuestionTextArea">
+                        <textarea placeholder="Enter your answer"></textarea>
+                    </div>
+                </div>
+            <div class="belowQuestionButtons">
+                 <div class="belowQuestionButton">
+                     <a class="closeButton closeModal"><img src="../img/dismiss.png" alt="close">Close</a>
+                </div>
+                 <div class="belowQuestionButton">
+                     <a href="#" class="askButton"><img src="../img/post.png" alt="close">Ask</a>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+         <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-body profile">
+                <span class="closeButton closeModal">&times;</span><br>
+                <h3>Firstname Lastname</h3>
+                <h4>Junior Innovation Consultant</h4>
+                <div>
+                    Location: Amsterdam, Netherlands<br>
+                    Skype: username<br>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div> 
+    <script type="text/javascript" src="../js/functions.js"></script>
 </body>
 
 </html>

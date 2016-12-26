@@ -5,11 +5,37 @@
 
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" type="text/css" href="../css/myanswers.css" />
+    <link rel="stylesheet" type="text/css" href="../css/ranking.css" />
 
+    <script type="text/javascript">
+        function openDefault(){
+            document.getElementById("defaultOpen").click();
+        }
+        
+        function openRanking(evt, timeframe) {
+            // Declare all variables
+            var i, listOfRanking, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            listOfRanking = document.getElementsByClassName("listOfRanking");
+            for (i = 0; i < listOfRanking.length; i++) {
+                listOfRanking[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(timeframe).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </head>
 
-<body>
+<body onload="openDefault()">
     <div class="header">
         <div class="headerButtons">
             <a href="#" class="askButton"><img src="../img/post.png" alt="ask">Ask</a>
@@ -38,60 +64,73 @@
     </div>
     
     <div class="containterBody">
-        <div class="topActionButton">
-            <a href="#" alt="Ask a Question"><img src="../img/post.png">Ask a New Question</a>
+        <div class="timeframeButtons">
+            <a href="javascript:void(0)" id="defaultOpen" class="tablinks" onclick="openRanking(event, 'weekly')">Weekly</a>
+            <a href="javascript:void(0)"class="tablinks" onclick="openRanking(event, 'total')">Total</a>
         </div>
-    
-        <div class="listOfPosts">
-            <div class="post">
-                <div class="postHeader">
-                    <div class="postHeaderDetails">
-                        <a href="#" class="posterProfile">Aaron Boogaard</a>
-                        <p class="timestamp">6/66 at 12:34</p>
-                    </div>
-                    <div class="postHeaderIcons">
-                        <a href="#" class="profileButton"> <img src="../img/profileIcon.png" alt="profile"></a>
-                        <a href="#" class="questionStatus"><img src="../img/answeredUsefully.png" alt="questionStatus"></a>
-                    </div>
+        <div id="weekly" class="listOfRanking">
+            <div class="ranking">
+                <div class="rankingHeader">
+                    <h3>Personal Metrics</h3>
                 </div>
-                <div class="postContent">
-                    <p>I got the call today, I didn't want to hear, but I knew that it would come. An old, true friend of ours was talkin' on the phone. She said:"You found someone?". And I thought of all the bad luck. And the struggles we went through. And how I lost me and you lost you.</p>
-                        
-                        <p>What are these voices outside love's open door? Make us throw off our contentment and beg for something more?</p>
+                <div class="rankingPersonal">
+                    <p>Questions selected for you: <span>2</span>
+                        Questions you answerd: <span>1</span> 
+                    </p>
                 </div>
             </div>
-                        <div class="post">
-                <div class="postHeader">
-                    <div class="postHeaderDetails">
-                        <a href="#" class="posterProfile">Aaron Boogaard</a>
-                        <p class="timestamp">6/66 at 12:34</p>
-                    </div>
-                    <div class="postHeaderIcons">
-                        <a href="#" class="profileButton"> <img src="../img/profileIcon.png" alt="profile"></a>
-                        <a href="#" class="questionStatus"><img src="../img/answeredUsefully.png" alt="questionStatus"></a>
-                    </div>
+            <div class="ranking">
+                <div class="rankingHeader">
+                    <h3>Global Ranking</h3>
                 </div>
-                <div class="postContent">
-                    <p>I got the call today, I didn't want to hear, but I knew that it would come. An old, true friend of ours was talkin' on the phone. She said:"You found someone?". And I thought of all the bad luck. And the struggles we went through. And how I lost me and you lost you.</p>
-                        
-                        <p>What are these voices outside love's open door? Make us throw off our contentment and beg for something more?</p>
+                <div class="rankingGlobal">
+                    <h4>Top 5 Questions Answered:</h4>
+                    <p>1. Don Henley
+                        2. Leonard Cohen
+                        3. Niemand Weet
+                        4. Dat Ik Geen
+                        5. Namen Verzin
+                    </p>
+                    <h4>Top 5 Solvers:</h4>
+                    <p>1. Donald Trump
+                        2. Paris Hilton
+                        3. Some One
+                        4. Someone Else
+                        5. That Guy
+                    </p>
                 </div>
             </div>
-                        <div class="post">
-                <div class="postHeader">
-                    <div class="postHeaderDetails">
-                        <a href="#" class="posterProfile">Aaron Boogaard</a>
-                        <p class="timestamp">6/66 at 12:34</p>
-                    </div>
-                    <div class="postHeaderIcons">
-                        <a href="#" class="profileButton"> <img src="../img/profileIcon.png" alt="profile"></a>
-                        <a href="#" class="questionStatus"><img src="../img/answeredUsefully.png" alt="questionStatus"></a>
-                    </div>
+        </div>
+        <div id="total" class="listOfRanking">
+            <div class="ranking">
+                <div class="rankingHeader">
+                    <h3>Personal Metrics</h3>
                 </div>
-                <div class="postContent">
-                    <p>I got the call today, I didn't want to hear, but I knew that it would come. An old, true friend of ours was talkin' on the phone. She said:"You found someone?". And I thought of all the bad luck. And the struggles we went through. And how I lost me and you lost you.</p>
-                        
-                        <p>What are these voices outside love's open door? Make us throw off our contentment and beg for something more?</p>
+                <div class="rankingPersonal">
+                    <p>Questions selected for you: <span>90</span>
+                        Questions you answerd: <span>70</span> 
+                    </p>
+                </div>
+            </div>
+            <div class="ranking">
+                <div class="rankingHeader">
+                    <h3>Global Ranking</h3>
+                </div>
+                <div class="rankingGlobal">
+                    <h4>Top 5 Questions Answered:</h4>
+                    <p>1. Glenn Frey
+                        2. Leonard Cohen
+                        3. Don Henley
+                        4. Joe Walsh
+                        5. T. Smith
+                    </p>
+                    <h4>Top 5 Solvers:</h4>
+                    <p>1. That Guy
+                        2. Someoone Else
+                        3. Some One
+                        4. Paris Hilton
+                        5. Donald Trump
+                    </p>
                 </div>
             </div>
         </div>

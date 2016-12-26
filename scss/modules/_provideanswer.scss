@@ -1,0 +1,121 @@
+.answerDeck{
+    width: 335px;
+    margin: 8px auto;
+    margin-bottom: $menuHeight + 8px;
+    background-color: $activeColor;
+    @include heavyshadow;
+}
+
+.answerContent{
+    padding: 2px 5px 5px;
+    color: $wTextColor;
+    -webkit-animation: fadeEffect 0.75s;
+    animation: fadeEffect 0.75s; /* Fading effect takes 1 second */
+
+    @-webkit-keyframes fadeEffect {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes fadeEffect {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+}
+.answerContentHeader{
+    @include displayFlex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    
+    .headerLogoTimestamp{
+        display: inline-block;
+        @include displayFlex;
+        align-items: center;
+        img{
+            height: 30px;
+            display: inline-block;
+            margin: 5px 5px;
+        }
+        
+        .timestamp{
+            opacity: 0.75;
+            display: block;
+            max-width: 125px;
+            display: inline-block;
+            text-align: center;
+            margin: 0 5px;
+        }
+    }
+    .poster{
+        color: $wTextColor;
+        flex-basis: 2;
+        text-align: right;
+        font-weight: 500;
+        span{
+            font-weight: normal;
+            opacity: 0.75;
+        }
+    }
+}
+.answerContentText{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+    p{
+        max-width: 375px;
+        @include paragraphFix;
+    }
+    border-bottom: 1px solid white;
+}
+.enterAnswer{
+    .enterAnswerHeader{
+        width: 100%;
+        text-align: center;
+        h3{
+            color: $wTextColor;
+            margin: 0 auto;
+            padding: 5px 0;
+            font-size: 25px;
+        }
+    }
+    .enterAnswerTextArea{
+        padding: 5px 10px;
+        border-bottom: 1px solid white;
+        textarea{
+            @include textAreastyling;
+            min-height: 25vh;
+        }
+    }
+}
+.belowAnswersButtons{
+    @include displayFlex;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 5px;
+    
+    .closeButton, .answerButton{
+        @include displayFlex;
+        @include border-radius (10px);
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+        width: 100px;
+        background-color: $brokenWhite;
+        color: $activeTextColor;
+        padding: 5px 5px 5px 5px;
+        font-size: 16px;
+        img{
+            height: 25px;
+        }
+    }
+}
