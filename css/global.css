@@ -176,6 +176,17 @@ option {
 }
 
 .header {
+  background-color: #FFFBF5;
+  height: 45px;
+  width: 100%;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 2;
+}
+.header .headerWrapper {
+  background-color: #FFFBF5;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
@@ -186,28 +197,26 @@ option {
   /* NEW - Chrome */
   display: flex;
   /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  background-color: #FFFBF5;
   height: 45px;
-  position: fixed;
-  z-index: 1;
+  z-index: 2;
+  margin: 0 auto;
   width: 100%;
+  max-width: 770px;
   flex-direction: row;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  padding: 0 0;
 }
-.header .headerButtons, .header h4 {
+.header .headerWrapper .headerButtons, .header .headerWrapper h4 {
   flex-basis: 1 auto;
   padding: 0 10px;
 }
-.header .headerButtons {
+.header .headerWrapper .headerButtons {
   width: 80px;
 }
-.header h4 {
+.header .headerWrapper h4 {
   font-size: 16px;
   padding-top: 5px;
 }
@@ -327,9 +336,31 @@ option {
   opacity: 1;
 }
 
+@media only screen and (min-width: 767px) {
+  .menu .menuButtonContainer a {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .menu {
+    flex-direction: column;
+    width: 150px;
+    height: 100%;
+    padding-top: 90px;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .menu .menuButtonContainer a {
+    font-size: 14px;
+    opacity: 0.75;
+  }
+}
 .listOfPosts {
   background-color: #FFFBF5;
   width: 90vw;
+  max-width: 750px;
   margin: 10px auto 75px;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
@@ -445,6 +476,7 @@ option {
   padding: 0;
   border: 1px solid #888;
   width: 90vw;
+  max-width: 750px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;

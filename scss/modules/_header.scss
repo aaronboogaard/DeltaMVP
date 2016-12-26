@@ -1,27 +1,37 @@
 .header{
-    @include displayFlex;
     background-color: $brokenWhite;
     height: $headerHeight;
-    position: fixed;
-    z-index: 1;
     width: 100%;
-    flex-direction: row;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
     @include shadow;
+    position: fixed;
+    z-index: 2;
+   
+    .headerWrapper{
+        background-color: $brokenWhite;
+        @include displayFlex;
+        height: $headerHeight;
+        z-index: 2;
+        margin: 0 auto;
+        width: 100%;
+        max-width: $maxWidth + 20px;
+        flex-direction: row;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        padding: 0 0;
 
-    .headerButtons, h4{
-        flex-basis: 1 auto;
-        padding: 0 10px;
-    }
-    .headerButtons{
-        width: 80px;
-    }
-    h4{
-        font-size: 16px;
-        padding-top: 5px;
+        .headerButtons, h4{
+            flex-basis: 1 auto;
+            padding: 0 10px;
+        }
+        .headerButtons{
+            width: 80px;
+        }
+        h4{
+            font-size: 16px;
+            padding-top: 5px;
+        }
     }
     
     .askButton{
@@ -31,7 +41,6 @@
         align-items: stretch;
         -webkit-justify-content: space-between;
         justify-content: space-between;
-        
         background-color: $activeColor;
         color: $wTextColor;
         padding: 5px 10px 5px 5px;

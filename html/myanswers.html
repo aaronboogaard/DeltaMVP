@@ -10,14 +10,39 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="headerButtons">
-            <a href="#" class="askButton"><img src="../img/post.png" alt="ask">Ask</a>
+<div class="header">
+        <div class="headerWrapper">
+            <div class="headerButtons">
+                <a href="#" id="myBtn" class="askButton"><img src="../img/post.png" alt="ask">Ask</a>
+            </div>
+            <h4 class="pageTitle">Global</h4>
+            <div class="headerButtons">
+                <a href="#" class="profileButton"> <img src="../img/profileIcon.png" alt="profile"></a>
+            </div>
         </div>
-        <h4 class="pageTitle">My Answers</h4>
-        <div class="headerButtons">
-            <a href="#" class="profileButton"> <img src="../img/profileIcon.png" alt="profile"></a>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="enterQuestion">
+                <div class="enterQuestionHeader">
+                    <h3>Ask Question</h3>
+                </div>
+                <div class="enterQuestionTextArea">
+                    <textarea placeholder="Enter your question"></textarea>
+                </div>
+            </div>
+        <div class="belowQuestionButtons">
+             <div class="belowQuestionButton">
+                 <a class="closeButton closeModal"><img src="../img/dismiss.png" alt="close">Close</a>
+            </div>
+             <div class="belowQuestionButton">
+                 <a href="#" class="askButton"><img src="../img/post.png" alt="close">Ask</a>
+            </div>
         </div>
+        </div>
+      </div>
     </div>
     <div class="menu">
         <div class="menuButtonContainer">
@@ -95,7 +120,8 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
+    <script type="text/javascript" src="../js/functions.js"></script>
 </body>
 
 </html>

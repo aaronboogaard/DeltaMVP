@@ -176,6 +176,17 @@ option {
 }
 
 .header {
+  background-color: #FFFBF5;
+  height: 45px;
+  width: 100%;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 2;
+}
+.header .headerWrapper {
+  background-color: #FFFBF5;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
@@ -186,28 +197,26 @@ option {
   /* NEW - Chrome */
   display: flex;
   /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  background-color: #FFFBF5;
   height: 45px;
-  position: fixed;
-  z-index: 1;
+  z-index: 2;
+  margin: 0 auto;
   width: 100%;
+  max-width: 770px;
   flex-direction: row;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  padding: 0 0;
 }
-.header .headerButtons, .header h4 {
+.header .headerWrapper .headerButtons, .header .headerWrapper h4 {
   flex-basis: 1 auto;
   padding: 0 10px;
 }
-.header .headerButtons {
+.header .headerWrapper .headerButtons {
   width: 80px;
 }
-.header h4 {
+.header .headerWrapper h4 {
   font-size: 16px;
   padding-top: 5px;
 }
@@ -327,6 +336,27 @@ option {
   opacity: 1;
 }
 
+@media only screen and (min-width: 767px) {
+  .menu .menuButtonContainer a {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .menu {
+    flex-direction: column;
+    width: 150px;
+    height: 100%;
+    padding-top: 90px;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .menu .menuButtonContainer a {
+    font-size: 14px;
+    opacity: 0.75;
+  }
+}
 .topActionButton {
   margin: 10px auto;
   width: 275px;
@@ -364,10 +394,26 @@ option {
   height: 40px;
   margin-left: 10px;
 }
+@media only screen and (min-width: 1200px) {
+  .topActionButton a {
+    transition: 0.3s;
+  }
+  .topActionButton a:hover {
+    border: 2px solid #80A8CC;
+    background-color: #80A8CC;
+    color: #FFFBF5;
+    transition: 0.3s;
+  }
+  .topActionButton a:active {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+}
 
 .listOfPosts {
   background-color: #FFFBF5;
   width: 90vw;
+  max-width: 750px;
   margin: 10px auto 75px;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
@@ -448,6 +494,190 @@ option {
 }
 .post .postContent a p:last-child {
   border-bottom: 1px solid #CACACA;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 10;
+  /* Sit on top */
+  padding-top: 50px;
+  /* Location of the box */
+  padding-bottom: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #F2EEE8;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #FFFBF5;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 90vw;
+  max-width: 750px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: 300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: 300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+/* The Close Button */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #80A8CC;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #80A8CC;
+  color: white;
+}
+
+.profile {
+  text-align: center;
+  background-color: #80A8CC;
+}
+.profile .closeButton {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.profile .closeButton:hover, .profile .closeButton:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.enterQuestion .enterQuestionHeader {
+  width: 100%;
+  margin-top: 5px;
+  text-align: center;
+}
+.enterQuestion .enterQuestionHeader h3 {
+  color: #80A8CC;
+  font-weight: normal;
+  margin: 0 auto;
+  padding: 5px 0;
+  font-size: 25px;
+}
+.enterQuestion .enterQuestionTextArea {
+  padding: 5px 0;
+}
+.enterQuestion .enterQuestionTextArea textarea {
+  resize: none;
+  display: inline-block;
+  margin: 0 0;
+  width: 100%;
+  font-size: 15px;
+  background-color: #F2EEE8;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  color: #4B453A;
+  border: 1px solid #DAD8D7;
+  overflow: auto;
+  padding: 5px 5px;
+  -webkit-transition: border 0.3s;
+  -moz-transition: border 0.3s;
+  -o-transition: border 0.3s;
+  transition: border 0.3s;
+  min-height: 33vh;
+}
+.enterQuestion .enterQuestionTextArea textarea:focus {
+  outline: none;
+}
+
+.belowQuestionButtons {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+.belowQuestionButtons .closeButton, .belowQuestionButtons .askButton {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  width: 100px;
+  background-color: #80A8CC;
+  color: #FFFFFF;
+  padding: 5px 5px 5px 5px;
+  font-size: 16px;
+}
+.belowQuestionButtons .closeButton img, .belowQuestionButtons .askButton img {
+  height: 25px;
 }
 
 /*# sourceMappingURL=myquestions.css.map */

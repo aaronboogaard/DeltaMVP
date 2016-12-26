@@ -39,3 +39,33 @@
         }
     }
 }
+
+@media only screen and (min-width:767px){
+    .menu{
+        .menuButtonContainer{
+            a{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .menu{
+        flex-direction: column;
+        width: $menuHeight*2;
+        height: 100%;
+        padding-top: $headerHeight*2;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-align-items: center;
+        align-items: center;
+        
+        .menuButtonContainer{
+            a{
+                font-size: 14px;
+                opacity: 0.75;
+            }
+        }
+    }
+}

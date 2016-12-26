@@ -1,7 +1,7 @@
-
 .listOfPosts{
     background-color: $brokenWhite;
     width: $postWidth;
+    max-width: $maxWidth;
     margin: 10px auto $menuHeight;
     @include heavyshadow;
     padding: 5px 10px;

@@ -1,6 +1,7 @@
 .timeframeButtons{
     background-color: $brokenWhite;
     width: $rankingWidth;
+    max-width: $maxWidth;
     margin: 10px auto 0;
     @include displayFlex;
     
@@ -15,11 +16,27 @@
     .active{
             color: $wTextColor;
             background-color: $activeColor;
+    }
+    @media only screen and (min-width:1200px){
+        a{
+            transition: 0.3s;
         }
+        a:hover{
+        border: 2px solid $activeColor;
+        background-color: $activeColor;
+        color: $brokenWhite; 
+            transition: 0.3s;
+        }
+        a:active{
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+    }
 }
 .listOfRanking{
     background-color: $brokenWhite;
     width: $rankingWidth;
+    max-width: $maxWidth;
     margin: 0 auto $menuHeight;
     @include shadow;
     padding: 5px 10px;
