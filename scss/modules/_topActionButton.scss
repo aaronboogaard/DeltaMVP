@@ -1,3 +1,7 @@
 .topActionButton{
-   @include topButton;
+   @include topButton($activeColor);
+}
+
+.topCloseQuestionButton{
+    @include topButton($green);
 }

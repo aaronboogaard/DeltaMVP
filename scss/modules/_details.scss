@@ -6,6 +6,13 @@
         padding-bottom: 5px;
     }
     .answerHeader{
+        @include displayFlex;
+        flex-direction: row;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        width: 100%;
         color: $pTextColor;
         text-align: left;
         p{
@@ -14,6 +21,46 @@
             a{
                 color: $pTextColor;
                 font-weight: 500;
+                @media only screen and (min-width:1200px){
+                    &:hover{
+                        color: $activeTextColor;
+                    }
+                }
+            }
+        }
+        .topAnswer{
+            @include displayFlex;
+            flex-direction: row;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            p{
+                padding-top: 3px;
+                padding-left: 5px;
+                color: $yellow;
+                font-weight: 500;
+                display: none;
+                @media only screen and (min-width:1200px){
+                    display: inline-block;
+                }
+            }
+            svg{
+                height: 25px;
+                .a{fill: none;}
+                .b{fill: $yellow;}
+                margin: 0 5px;
+            }
+        }
+        .notTopAnswer{
+            p{
+                display: none;
+            }
+            svg{
+                height: 25px;
+                .a{fill: none;}
+                .b{fill: $inactiveColor;}
+                margin: 0 5px;
             }
         }
     }
@@ -41,14 +88,7 @@
     -webkit-justify-content: space-between;
     justify-content: space-between;
     width: 100%;
-//    .belowAnswersButton{
-//        background-color: $activeColor;
-//        color: $wTextColor;
-//        padding: 5px 10px 5px 5px;
-//        img{
-//            height: 20px
-//        }
-//    }
+    
     .closeButton, .answerButton{
         @include displayFlex;
         @include border-radius (10px);
@@ -63,6 +103,12 @@
         font-size: 16px;
         img{
             height: 25px;
+        }
+    }
+    .closeButton{
+        img{
+            height: 21px;
+            margin: 2px 0;
         }
     }
 }
