@@ -1,0 +1,73 @@
+.profile{
+    background-color: $brokenWhite;
+    width: $postWidth;
+    max-width: $maxWidth;
+    margin: 10px auto $menuHeight;
+    @include heavyshadow;
+    padding: 5px 10px;
+    color: $pTextColor;
+    padding-top: 5px;
+    
+    .profileName{
+        text-align: center;
+        h3{
+            color: $activeColor;
+            margin: 5px 0 0;
+            padding: 0 0;
+            font-size: 25px;
+        }
+    }
+    .profileDetails{
+        ul{
+            padding-bottom: 5px;
+            border-bottom: 1px solid $inactiveColor;
+            li{
+                line-height: 20px;
+                list-style: none;
+                img{
+                    height: 20px;
+                    display: inline-block;
+                }
+            }
+        }
+        .laterButtonDiv{
+            margin: 5px auto;
+            width: 100%;
+    a{
+        @include displayFlex;
+        @include shadow;
+        @include border-radius (5px);
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        border: 2px solid $activeColor;
+        background-color: $activeColor;
+        color: $wTextColor;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 5px 20px 5px 5px;
+        
+        img{
+            height: 20px;
+            margin-right: 10px;
+        }
+    }
+    @media only screen and (min-width:1200px){
+        a{
+            transition: 0.3s;
+        }
+        a:hover{
+        border: 2px solid $activeColor;
+        background-color: $brokenWhite;
+        color: $activeColor; 
+            transition: 0.3s;
+        }
+        a:active{
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+    }
+        }
+    }
+}

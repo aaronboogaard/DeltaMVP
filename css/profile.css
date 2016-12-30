@@ -357,11 +357,44 @@ option {
     opacity: 0.75;
   }
 }
-.timeframeButtons {
+.profile {
   background-color: #FFFBF5;
   width: 90vw;
   max-width: 750px;
-  margin: 10px auto 0;
+  margin: 10px auto 75px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  padding: 5px 10px;
+  color: #4B453A;
+  padding-top: 5px;
+}
+.profile .profileName {
+  text-align: center;
+}
+.profile .profileName h3 {
+  color: #80A8CC;
+  margin: 5px 0 0;
+  padding: 0 0;
+  font-size: 25px;
+}
+.profile .profileDetails ul {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #CACACA;
+}
+.profile .profileDetails ul li {
+  line-height: 20px;
+  list-style: none;
+}
+.profile .profileDetails ul li img {
+  height: 20px;
+  display: inline-block;
+}
+.profile .profileDetails .laterButtonDiv {
+  margin: 5px auto;
+  width: 100%;
+}
+.profile .profileDetails .laterButtonDiv a {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
@@ -372,124 +405,42 @@ option {
   /* NEW - Chrome */
   display: flex;
   /* NEW, Spec - Opera 12.1, Firefox 20+ */
-}
-.timeframeButtons a {
-  flex: 1;
-  font-size: 20px;
-  text-align: center;
-  padding: 5px 0;
-  border: 2px solid #80A8CC;
-  color: #80A8CC;
-}
-.timeframeButtons .active {
-  color: #FFFFFF;
-  background-color: #80A8CC;
-}
-@media only screen and (min-width: 1200px) {
-  .timeframeButtons a {
-    transition: 0.3s;
-  }
-  .timeframeButtons a:hover {
-    border: 2px solid #80A8CC;
-    background-color: #80A8CC;
-    color: #FFFBF5;
-    transition: 0.3s;
-  }
-  .timeframeButtons a:active {
-    opacity: 0.8;
-    transition: 0.3s;
-  }
-}
-
-.listOfRanking {
-  background-color: #FFFBF5;
-  width: 90vw;
-  max-width: 750px;
-  margin: 0 auto 75px;
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  padding: 5px 10px;
-  display: none;
-}
-
-.ranking {
-  -webkit-animation: fadeEffect 0.75s;
-  animation: fadeEffect 0.75s;
-  /* Fading effect takes 1 second */
-  color: #4B453A;
-}
-@-webkit-keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.ranking .rankingHeader h3 {
-  color: #80A8CC;
-  margin: 5px 0 0;
-  padding: 0 0;
-  font-size: 25px;
-}
-.ranking .rankingPersonal {
-  padding: 10px 10px 0;
-}
-.ranking .rankingPersonal p {
-  max-width: 90vw;
-  white-space: pre-line;
-  text-align: left;
-  margin: 1em 0 0;
-  padding: 0;
-  font-weight: 600;
-}
-.ranking .rankingPersonal p:first-child {
-  margin-top: 0;
-}
-.ranking .rankingPersonal p:last-child {
-  border-bottom: 1px solid #CACACA;
-  padding-bottom: 10px;
-}
-.ranking .rankingPersonal p span {
-  float: right;
-  font-weight: normal;
-}
-.ranking .rankingGlobal {
-  padding: 0px 10px 0;
-}
-.ranking .rankingGlobal h4 {
-  margin: 5px 0 5px;
-  padding: 0 0;
-  font-weight: 600;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: 2px solid #80A8CC;
+  background-color: #80A8CC;
+  color: #FFFFFF;
   font-size: 16px;
+  font-weight: 400;
+  padding: 5px 20px 5px 5px;
 }
-.ranking .rankingGlobal p {
-  max-width: 90vw;
-  white-space: pre-line;
-  text-align: left;
-  margin: 1em 0 0;
-  padding: 0;
-  margin-top: 0px;
-  padding-left: 10px;
+.profile .profileDetails .laterButtonDiv a img {
+  height: 20px;
+  margin-right: 10px;
 }
-.ranking .rankingGlobal p:first-child {
-  margin-top: 0;
-}
-.ranking .rankingGlobal p:last-child {
-  padding-bottom: 10px;
-}
-.ranking .rankingGlobal p span {
-  float: right;
-  font-weight: normal;
+@media only screen and (min-width: 1200px) {
+  .profile .profileDetails .laterButtonDiv a {
+    transition: 0.3s;
+  }
+  .profile .profileDetails .laterButtonDiv a:hover {
+    border: 2px solid #80A8CC;
+    background-color: #FFFBF5;
+    color: #80A8CC;
+    transition: 0.3s;
+  }
+  .profile .profileDetails .laterButtonDiv a:active {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
 }
 
 /* The Modal (background) */
@@ -676,4 +627,4 @@ option {
   height: 25px;
 }
 
-/*# sourceMappingURL=ranking.css.map */
+/*# sourceMappingURL=profile.css.map */

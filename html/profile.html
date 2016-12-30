@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delta</title>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="../css/profile.css" />
+</head>
+
+<body onload="openDefault()">
+    <div class="header">
+        <div class="headerWrapper">
+            <div class="headerButtons">
+                <a href="#" id="myBtn" class="askButton"><img src="../img/post.png" alt="ask">Ask</a>
+            </div>
+            <h4 class="pageTitle">Profile</h4>
+            <div class="headerButtons">
+                <a href="#" class="profileButton"> <img src="../img/profileIcon.png" alt="profile"></a>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="enterQuestion">
+                <div class="enterQuestionHeader">
+                    <h3>Ask Question</h3>
+                </div>
+                <div class="enterQuestionTextArea">
+                    <textarea placeholder="Enter your question"></textarea>
+                </div>
+            </div>
+        <div class="belowQuestionButtons">
+             <div class="belowQuestionButton">
+                 <a class="closeButton closeModal"><img src="../img/dismiss.png" alt="close">Close</a>
+            </div>
+             <div class="belowQuestionButton">
+                 <a href="#" class="askButton"><img src="../img/post.png" alt="close">Ask</a>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu">
+        <div class="menuButtonContainer">
+            <a href="global.html" class="menuButton"><img src="../img/globalIcon.png" alt="Global"/>Global</a>
+        </div>
+        <div class="menuButtonContainer">
+            <a href="myquestions.html" class="menuButton"><img src="../img/question.png" alt="My Questions"/>My Questions</a>
+        </div>
+        <div class="menuButtonContainer">
+            <a href="questiondeck.html" class="menuButton"><img src="../img/deck.png" alt="Question Deck"/>My Deck</a>
+        </div>
+        <div class="menuButtonContainer">
+            <a href="myanswers.html" class="menuButton"><img src="../img/answer.png" alt="My Answers"/>My Answers</a>
+        </div>
+        <div class="menuButtonContainer">
+            <a href="ranking.html" class="menuButton"><img src="../img/ranking.png" alt="Ranking"/>Ranking</a>
+        </div>
+    </div>
+    
+    <div class="containterBody">
+        <div class="profile">
+                <div class="profileName">
+                    <h3>Bert van Accenture</h3>
+                </div>
+                <div class="profileDetails">
+                    <ul>
+                        <li><img src="../img/targeted.png" alt="icon">Senior Consultant at TechStrat</li>
+                        <li><img src="../img/targeted.png" alt="icon">IPO, Amsterdam,The Netherlands</li>
+                        <li><img src="../img/targeted.png" alt="icon">+31 6 12 34 56 78</li>
+                        <li><img src="../img/targeted.png" alt="icon">skypeusername</li>
+                        <li><img src="../img/targeted.png" alt="icon">e@mail.com</li>
+                    </ul>
+                    <div class="laterButtonDiv">
+                        <a href="#" alt="Saved for Later List"><img src="../img/saveForLaterGrey.png">Saved for Later List</a>
+                    </div>
+                </div>
+            </div>
+    </div>  
+    <script type="text/javascript" src="../js/functions.js">
+    </script>
+</body>
+
+</html>

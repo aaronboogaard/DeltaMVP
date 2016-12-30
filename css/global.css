@@ -576,17 +576,17 @@ option {
   color: white;
 }
 
-.profile {
+.profileModal {
   text-align: center;
   background-color: #80A8CC;
 }
-.profile .closeButton {
+.profileModal .closeButton {
   color: black;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-.profile .closeButton:hover, .profile .closeButton:focus {
+.profileModal .closeButton:hover, .profileModal .closeButton:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
